@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Score</title>
+
+    <meta property="og:title" content="Game Score">
+    <meta property="og:description" content="Check out my game score!">
+    <meta property="og:image" content="https://yusukenakanoroom6.github.io/background.png">
+    <meta property="og:url" content="https://yusukenakanoroom6.github.io/score.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        /* 任意のCSS */
+    </style>
+</head>
+<body>
+    <div id="score-placeholder">0</div>
+
+    <script>
+        // スコアを表示するためのJavaScript
+        const urlParams = new URLSearchParams(window.location.search);
+        const score = urlParams.get('score') || '0';
+        document.getElementById('score-placeholder').innerText = score;
+    </script>
+</body>
+</html>
