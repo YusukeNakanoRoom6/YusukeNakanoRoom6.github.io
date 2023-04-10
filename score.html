@@ -20,13 +20,9 @@
 
     <script>
         // スコアを表示するためのJavaScript
-        window.addEventListener('message', (event) => {
-            if (event.origin !== 'https://yusukenakanoroom6.github.io/') {
-                return;
-            }
-            const score = event.data.score || '0';
-            document.getElementById('score-placeholder').innerText = score;
-        });
+        const urlParams = new URLSearchParams(window.location.search);
+        const score = urlParams.get('score') || '0';
+        document.getElementById('score-placeholder').innerText = score;
     </script>
 </body>
 </html>
